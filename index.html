@@ -106,7 +106,7 @@
         let currentProgress = parseInt(localStorage.getItem("donationProgress")) || 0;
         
         // Update the progress
-        let newProgress = currentProgress + (parseInt(amount) / 1000000); // Scale down the amount
+        let newProgress = currentProgress + (parseInt(amount) / 100); // Scale down the amount
         progress.style.width = newProgress + "%";
         
         // Save the progress to localStorage
@@ -117,7 +117,7 @@
         
         // Update the progress bar with a thank you message if goal is reached
         if (newProgress >= 100) {
-          alert= "Mulțumim pentru donația dumneavoastră generoasă!";
+          alert()= "Mulțumim pentru donația dumneavoastră generoasă!";
         }
       });
       
